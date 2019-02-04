@@ -1,0 +1,122 @@
+<div class='topnav'>
+	<div class='topnav-leftcon'>
+		<div class='topnav-item'>
+			<h1>atria</h1>
+		</div>
+	</div>
+
+	<div class='topnav-rightcon'>
+		<div class='topnav-item'>
+			<!--- #topNavSearch input value for searching keywords across entire site -->
+			<div class='topnav-searchcon'>
+			<input class='topnav-search' id='topNavSearch' placeholder='Search'>
+			<i class='fas fa-search'></i>
+			</div>
+			<!-- #topNavSearch drop down to narrow search options -->
+			<div class='topnav-search-dropdown'>
+				<h4>Search For:</h4>
+				<ul>
+					<li><a href='../searchPages/organizationsSearch.html'>Organizations</a></li>
+					<li><a href='../searchPages/neighboursSearch.html'>Neighbours</a></li>
+					<li><a href='../searchPages/eventsSearch.html'>Events</a></li>
+					<li><a href='../searchPages/opportunitiesSearch.html'>Opportunities</a></li>
+				</ul>
+			</div> <!-- search dropdown ends -->
+		</div>
+
+		<div class='topnav-item'>
+			<div class='topnav-notifycons'>
+				<!--- #msgsNotifyCount value increases here as new messages come in -->
+				<span id='msgsNotifyCount'>0</span>
+				<i class='fas fa-comment'></i>
+			</div>
+		</div>
+
+		<div class='topnav-item'>
+			<div class='topnav-notificat topnav-notifycons'>
+				<!--- #topNavNotificat value increases here as new notifications come in -->
+				<span id='notificatNotifyCount'>3</span>
+				<i class='fas fa-bell'></i>
+			</div>
+			<!--- topnav-notificat-dropdown all notifications values put here in necessary spans -->
+			<div class='topnav-notificat-dropdown'>
+				<h4>Notifications</h4>
+				<ul>
+					<li>
+						<a href=''><img src='../imgs/accounticon.png'>
+						<div class='notifi-infocon'>
+							<span class='notifi-name'>Account Name </span>
+							<span class='notifi-description'>the notification description</span>
+							<br>
+							<span class='notifi-date'>date &amp; time</span>
+						</div>
+						</a>
+						<a href=''><img src='../imgs/accounticon.png'>
+						<div class='notifi-infocon'>
+							<span class='notifi-name'>Account Name </span>
+							<span class='notifi-description'>the notification description</span>
+							<br>
+							<span class='notifi-date'>date &amp; time</span>
+						</div>
+						</a>
+						<a href=''><img src='../imgs/accounticon.png'>
+						<div class='notifi-infocon'>
+							<span class='notifi-name'>Account Name </span>
+							<span class='notifi-description'>the notification description</span>
+							<br>
+							<span class='notifi-date'>date &amp; time</span>
+						</div>
+						</a>
+					</li>
+				</ul>
+			</div> <!-- notification dropdown ends -->
+		</div> <!-- notification container ends -->
+		
+		<div class='topnav-item topnav-accountnamecon'>
+			<a href='../sitePages/profilePage.html'>Account Name</a>
+		</div>
+
+	</div> <!-- top nav right container ends -->
+</div> <!-- top nav ends -->
+
+
+<div class='sidenav'>
+  <i class='fas fa-bars'></i>
+	<div class='sidenav-con sidenav-top'>
+		<ul>
+			<li><a href='../sitePages/dashboardPage.html'>Dashboard</a></li>
+			<li><a href='../sitePages/createManagePage.html'>Create &amp; Manage</a></li>
+			<li><a href='../sitePages/profilePage.html'>Profile</a></li>
+		</ul>
+	</div>
+
+	<div class='sidenav-con sidenav-bottom'>
+		<ul>
+			<li><a href='../sitePages/contactPage.html'>Contact Us</a></li>
+			<li><a href='../sitePages/settingsPage.html'><i class="fas fa-cog"></i> Settings</a></li>
+		</ul>
+	</div>
+</div> <!-- side nav ends -->
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	
+<script>
+	$(document).ready(function() {
+		
+		$(".topnav-search").click(function() {
+			$( ".topnav-search-dropdown" ).slideToggle("fast");
+		});
+
+		$(".topnav-notificat").click(function() {
+			$( ".topnav-notificat-dropdown" ).slideToggle("fast");
+		});
+		
+		$(".fa-bars").click(function() {
+			$(".sidenav").toggleClass("sidenavShow");
+			$(".fa-bars").toggleClass("fa-times");
+		});
+							
+	});
+</script>

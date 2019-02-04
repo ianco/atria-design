@@ -1,0 +1,271 @@
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Quicksand', sans-serif; */
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: .8px;
+}
+
+a {
+	color: #2c2c2c;
+}
+
+a:hover {
+	border-bottom: 2px solid #9a9a9a !important;
+	-webkit-transition: all .6s ease;
+  	transition:  all .6s ease;
+}
+
+ul {
+	list-style: none;
+}
+
+input {
+	outline: none;
+	width: 15rem;
+	border: 1px solid #cecece;
+	padding: .2rem 1rem;
+	height: 1.7rem;
+	box-sizing: border-box;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+h1 {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+	letter-spacing: 5px;
+}
+
+h4 {
+	color: #2c2c2c;
+}
+
+/* 
+======================================
+	NAV TOP
+======================================
+*/
+
+.topnav {
+	position: fixed;
+	width: 100%;
+	height: 2.5rem;
+	color: #fff;
+	background: #FAD067;
+	z-index: 2;
+}
+
+.topnav-leftcon {
+	float: left;
+	padding: 0 1rem;
+}
+
+.topnav-rightcon {
+	position: relative;
+	float: right;
+	padding: 0 1rem;
+}
+
+.topnav-item {
+	position: relative;
+	display: inline-block;
+	line-height: 2.5rem;
+}
+
+.topnav-accountnamecon {
+	min-width: 6rem;
+	text-align: right;
+}
+
+.topnav-accountnamecon a {
+	color: #fff;
+	font-size: 16px;
+}
+
+.topnav-accountnamecon a:hover {
+	border-bottom: 2px solid #fff !important;
+}
+
+.topnav-searchcon {
+	position: relative;
+	margin: 0 2rem 0 0;
+}
+
+.topnav-searchcon .fa-search {
+	position: absolute;
+	top: 0;
+	right: .5rem;
+	color: #cecece;
+	font-size: 16px;
+	line-height: 2.5rem;
+}
+
+.topnav-msgs {
+	position: relative;
+}
+
+.topnav-notifycons {
+	position: relative;
+	padding: 0 .5rem;
+	cursor: pointer;
+}
+
+.topnav-notifycons .fas {
+	position: absolute;
+	line-height: 2.5rem;
+	bottom: 0;
+	right: 1.5rem;
+	font-size: 26px;
+	cursor: pointer;
+}
+
+.topnav-notifycons span {
+	position: relative;
+	padding: .1rem .4rem;
+	box-sizing: border-box;
+	border-radius: 100%;
+	background: #d10000;
+	font-size: 14px;
+	z-index: 2;
+}
+
+/* 
+======================================
+	NAV DROPDOWNS
+======================================
+*/
+
+.topnav-search-dropdown,
+.topnav-notificat-dropdown {
+	display: none;
+	position: absolute;
+	padding: .6rem .6rem 1rem .6rem;
+	max-height: 85vh;
+	background: #f1f1f1;
+	overflow: scroll;
+	border-radius: 0 0 5px 5px;
+}
+
+.topnav-search-dropdown a,
+.topnav-notificat-dropdown a {
+	padding: .6rem 0 0 0;
+	display: block;
+	border-bottom: 2px dashed #ccc;
+	width: auto;
+	top: 0;
+	font-size: 14px;
+}
+
+.topnav-search-dropdown {
+	width: 11rem;
+}
+
+
+.topnav-notificat-dropdown {
+	right: -7rem;
+	width: 15rem;
+}
+
+/* 
+======================================
+	NOTIFICATION STYLING
+======================================
+*/
+.topnav-notificat-dropdown li {
+	position: relative;
+}
+
+.notifi-infocon {
+	padding: 0 0 0 2.5rem;
+	line-height: 1.1rem
+}
+
+.topnav-notificat-dropdown img {
+	position: absolute;
+}
+
+.notifi-name {
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.notifi-description {
+	font-size: 14px;
+}
+
+.notifi-date {
+	font-size: 11px;
+	font-weight: 700;
+	color: #d10000;
+	width: 100%;
+	display: block;
+	text-align: right;
+	margin: .5rem 0 0 0;
+	padding: 0 .5rem 0 0;
+	box-sizing: border-box;
+}
+
+/* 
+======================================
+	NAV SIDE
+======================================
+*/
+
+
+.sidenav {
+	position: fixed;
+	height: 100%;
+	width: 3rem;
+	background: #f1f1f1;
+	overflow: hidden;
+	-webkit-transition: width .3s;
+	-webkit-transform: width .3s;
+	transition: width .3s;
+}
+
+.sidenavShow {
+	width: 17rem;
+}
+
+.sidenav .fa-bars {
+	position: absolute;
+	padding: 1rem .75rem;
+	top: 2.5rem;
+	font-size: 26px;
+	color: #cecece;
+	cursor: pointer;
+}
+
+.sidenav .fa-cog {
+	color: #cecece;
+}
+
+.sidenav-con {
+	position: absolute;
+	left: 3rem;
+	width: 70%;
+}
+
+.sidenav-top {
+	top: 6rem;
+}
+
+.sidenav-bottom {
+	bottom: 1rem;
+}
+
+.sidenav-con a {
+	padding: .6rem 0;
+	display: block;
+	border-bottom: 2px dashed #ccc;
+	width: 12rem;
+	font-size: 14px;
+}
