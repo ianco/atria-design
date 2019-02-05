@@ -115,16 +115,24 @@
 		$("#topNavSearch").click(function() {
 			$(".topnav-search-dropdown").slideToggle("fast");
 			$(".topnav-notificat-dropdown").hide();
+			$(".sidenavShow").addClass("sidenav");
+			$(".sidenav").removeClass("sidenavShow");
+			$(".fa-bars").removeClass("fa-times");
 		});
 
 		$("#notifications").click(function() {
 			$(".topnav-notificat-dropdown").slideToggle("fast");
 			$(".topnav-search-dropdown").hide();
+			$(".sidenavShow").addClass("sidenav");
+			$(".sidenav").removeClass("sidenavShow");
+			$(".fa-bars").removeClass("fa-times");
 		});
 
 		$(".fa-bars").click(function() {
 			$(".sidenav").toggleClass("sidenavShow");
 			$(".fa-bars").toggleClass("fa-times");
+			$(".topnav-search-dropdown").hide();
+			$(".topnav-notificat-dropdown").hide();
 		});
 
 	});
