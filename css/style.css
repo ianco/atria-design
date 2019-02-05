@@ -20,7 +20,7 @@ a {
 a:hover {
 	border-bottom: 2px solid #9a9a9a !important;
 	-webkit-transition: all .6s ease;
-  	transition:  all .6s ease;
+	transition: all .6s ease;
 }
 
 ul {
@@ -56,33 +56,39 @@ h4 {
 
 .topnav {
 	position: fixed;
-	width: 100%;
 	height: 2.5rem;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	width: 100%;
 	color: #fff;
 	background: #FAD067;
 	z-index: 2;
 }
 
-.topnav-leftcon {
-	float: left;
-	padding: 0 1rem;
+.topnav-con {
+	display: flex;
+	align-items: center;
+	padding: 0 .4rem;
 }
 
 .topnav-rightcon {
-	position: relative;
-	float: right;
-	padding: 0 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
 }
 
-.topnav-item {
-	position: relative;
-	display: inline-block;
-	line-height: 2.5rem;
+.topnav-searchcon {
+	padding: 0 .5rem 0 0;
+}
+
+.topnav-rightcon .topnav-item {
+	padding: .5rem
 }
 
 .topnav-accountnamecon {
-	min-width: 6rem;
-	text-align: right;
+	min-width: 5rem;
+	max-height: 2.5rem;
 }
 
 .topnav-accountnamecon a {
@@ -95,45 +101,33 @@ h4 {
 }
 
 .topnav-searchcon {
-	position: relative;
-	margin: 0 2rem 0 0;
+	display: flex;
+	align-items: center;
 }
 
 .topnav-searchcon .fa-search {
-	position: absolute;
-	top: 0;
-	right: .5rem;
-	color: #cecece;
-	font-size: 16px;
-	line-height: 2.5rem;
-}
-
-.topnav-msgs {
-	position: relative;
+	margin: 0 0 0 -1.5rem;
+	padding: 0 .5rem 0 0;
+	color: #ccc;
 }
 
 .topnav-notifycons {
-	position: relative;
-	padding: 0 .5rem;
+	width: 2rem;
+	display: flex;
+	align-items: flex-start;
 	cursor: pointer;
 }
 
 .topnav-notifycons .fas {
-	position: absolute;
-	line-height: 2.5rem;
-	bottom: 0;
-	right: 1.5rem;
 	font-size: 26px;
-	cursor: pointer;
 }
 
 .topnav-notifycons span {
-	position: relative;
+	font-size: 14px;
 	padding: .1rem .4rem;
-	box-sizing: border-box;
 	border-radius: 100%;
 	background: #d10000;
-	font-size: 14px;
+	margin: -.2rem 0 0 -.8rem;
 	z-index: 2;
 }
 
@@ -149,15 +143,19 @@ h4 {
 	position: absolute;
 	padding: .6rem .6rem 1rem .6rem;
 	max-height: 85vh;
+	min-height: 2rem;
 	background: #f1f1f1;
 	overflow: scroll;
 	border-radius: 0 0 5px 5px;
 }
 
+.topnav-search-dropdown a {
+	display: block;
+}
+
 .topnav-search-dropdown a,
 .topnav-notificat-dropdown a {
-	padding: .6rem 0 0 0;
-	display: block;
+	padding: 1rem 0 .2rem 0;
 	border-bottom: 2px dashed #ccc;
 	width: auto;
 	top: 0;
@@ -166,12 +164,13 @@ h4 {
 
 .topnav-search-dropdown {
 	width: 11rem;
+	top: 2.5rem;
 }
 
-
 .topnav-notificat-dropdown {
-	right: -7rem;
+	right: .5rem;
 	width: 15rem;
+	top: 2.5rem;
 }
 
 /* 
@@ -179,17 +178,13 @@ h4 {
 	NOTIFICATION STYLING
 ======================================
 */
-.topnav-notificat-dropdown li {
-	position: relative;
+.topnav-notificat-dropdown a {
+	display: flex;
+	justify-content: space-between;
 }
 
 .notifi-infocon {
-	padding: 0 0 0 2.5rem;
-	line-height: 1.1rem
-}
-
-.topnav-notificat-dropdown img {
-	position: absolute;
+	padding: 0 0 0 .2rem;
 }
 
 .notifi-name {
@@ -206,11 +201,11 @@ h4 {
 	font-weight: 700;
 	color: #d10000;
 	width: 100%;
-	display: block;
-	text-align: right;
 	margin: .5rem 0 0 0;
 	padding: 0 .5rem 0 0;
 	box-sizing: border-box;
+	float: right;
+	text-align: right;
 }
 
 /* 
@@ -268,4 +263,96 @@ h4 {
 	border-bottom: 2px dashed #ccc;
 	width: 12rem;
 	font-size: 14px;
+}
+
+/* 
+======================================
+	MEDIA QUERIES
+======================================
+*/
+
+@media only screen and (max-width: 700px) {
+	.topnav {
+		min-height: 3rem;
+	}
+
+	.topnav-searchcon input {
+		display: none;
+	}
+
+	.topnav-searchcon {
+		width: 2rem;
+	}
+
+	.topnav-searchcon .fa-search {
+		margin: 0 0 0 0;
+		padding: .3rem;
+		color: #fff;
+		border: 3px solid #fff;
+		border-radius: 100%;
+	}
+
+	.topnav-search-dropdown {
+		width: 17.5rem;
+		right: 0;
+		top: 3rem;
+		height: 100vh;
+		max-height: 100vh;
+		position: fixed;
+	}
+
+	.topnav-notificat-dropdown {
+		right: 0;
+		top: 3rem;
+		height: 100vh;
+		max-height: 100vh;
+		position: fixed;
+	}
+
+	.topnav-search-dropdown a,
+	.topnav-notificat-dropdown a {
+		padding: 2rem 0 .5rem 0;
+		border-bottom: 2px dashed #ccc;
+		width: auto;
+		top: 0;
+		font-size: 14px;
+	}
+
+	.sidenav .fa-bars {
+		top: 3rem;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.topnav-title {
+		display: none;
+	}
+
+	.topnav-con {
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.topnav-searchcon {
+		padding: 0 .1rem;
+	}
+
+	.topnav-search-dropdown {
+		width: 12rem;
+		left: 0;
+		right: auto;
+		top: 3rem;
+		height: 100vh;
+		max-height: 100vh;
+		position: fixed;
+	}
+	
+	.sidenav-con a {
+		width: 16rem;
+		padding: 2rem 0 .5rem 0;
+	}
+
+	.sidenavShow {
+		width: 100%;
+	}
 }
