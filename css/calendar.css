@@ -1,0 +1,89 @@
+.cal-body div {
+	text-align: center;
+}
+
+.cal-top {
+	height: 3rem;
+	line-height: 1.5rem;
+}
+
+.cal-selector:hover {
+	color: #FAD067;
+	border-bottom: 2px solid #FAD067;
+	cursor: pointer;
+}
+
+.cal-highlight {
+	color: #FAD067;
+	border-bottom: 2px solid #FAD067;
+}
+
+.cal-top-year h3 {
+	color: #FAD067;
+}
+
+.cal-top-title {
+	float: left;
+	margin: 1.5rem 0 0 0;
+}
+
+.cal-top-nav {
+	float: right;
+}
+
+.cal-top i,
+.cal-top span {
+	display: inline-block;
+	margin: 0 0 0 .5rem;
+
+}
+
+.cal-month-cont {
+	margin: 1rem 0 0 0;
+}
+
+.cal-body div ul {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+}
+
+.cal-body li {
+	flex-grow: 1;
+	width: 15%;
+	text-align: right;
+	margin: 1px;
+	font-size: 12px;
+}
+
+.cal-days-month li {
+	min-height: 4rem;
+	background: #f1f1f1;
+	padding: .7rem .3rem;
+	box-sizing: border-box;
+}
+
+.cal-days-month li span {
+	padding: 6px 8px;
+	border-radius: 100%;
+}
+
+.cal-days-month li:hover {
+	background: rgba(250, 208, 103, .2) !important;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.today {
+	background: rgba(250, 208, 103, .5) !important;
+	color: #fff;
+	font-weight: 600;
+}
+
+.today span {
+	background: #FAD067;
+}
+
+.grey {
+	color: #ccc;
+}
