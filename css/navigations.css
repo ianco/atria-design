@@ -4,6 +4,19 @@
 ======================================
 */
 
+.site-nav a {
+	color: #2c2c2c;
+	cursor: pointer;
+}
+
+.site-nav a:hover {
+	border-bottom: 2px solid #9a9a9a !important;
+}
+
+.fa-search {
+	font-size: 16px;
+}
+
 .topnav {
 	position: fixed;
 	height: 2.5rem;

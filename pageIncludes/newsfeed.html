@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Newsfeed</title>
 </head>
 
 <body>
 	<div class='newsfeed-cont'>
-	hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello 
+		<div id='eventnewsfeed'>
+		</div>
+		<div id='opportunitynewsfeed'>
+		</div>
+		<div id='statusnewsfeed'>
+		</div>
 	</div>
+
+	<script>
+		$(document).ready(function() {
+			$("#eventnewsfeed").load("pageIncludes/eventnewsfeed.html");	$("#opportunitynewsfeed").load("pageIncludes/opportunitynewsfeed.html");	$("#statusnewsfeed").load("pageIncludes/statusnewsfeed.html");
+		});
+	</script>
+
 </body>
+
 </html>
